@@ -89,13 +89,16 @@ def create_app(datapack: dict | None = None, ai_service: AiService | None = None
     # the UI, so every browser request carries an Origin header we enumerate.
     app.add_middleware(
         CORSMiddleware,
+        
         allow_origins=[
             "https://campusiq-black.vercel.app",
+            "https://dsu-code-clash-2-0-eureka.vercel.app",
             "http://localhost:5173",
             "http://127.0.0.1:5173",
             "http://localhost:4173",
             "http://127.0.0.1:4173",
         ],
+
         allow_credentials=False,
         allow_methods=["GET", "POST", "OPTIONS"],
         allow_headers=["Content-Type", "Accept"],
