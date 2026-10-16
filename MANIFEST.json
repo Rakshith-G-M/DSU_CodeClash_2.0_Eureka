@@ -65,6 +65,32 @@
       "path": "frontend/public/favicon.svg",
       "bytes": 649,
       "sha256": "c663974a9d8b1918724b505e59b2c06bf10ca3dbe7384c0c9cee3277b88dbc58"
+  "package": "GreenTwin_BIM_DigitalTwin.zip",
+  "role": "role-bim-twin",
+  "title": "BIM & Digital Twin",
+  "source_project": "the-commit-crew",
+  "file_count": 27,
+  "total_bytes": 44814637,
+  "files": [
+    {
+      "path": "CONTRIBUTOR_GUIDE.md",
+      "bytes": 6288,
+      "sha256": "471af826cb1ee70b9c4a4b465122b910179d6bf2937da0277671de0c0d0b64bf"
+    },
+    {
+      "path": "DS3_TalTech_V4.ifc",
+      "bytes": 38728810,
+      "sha256": "05919eee0701b955d3d08501c4889c879d9c486e2389a6a1a5cdaad32a5d10ba"
+    },
+    {
+      "path": "docs/M2_EXTERNAL_MAPPING_RESEARCH.md",
+      "bytes": 9505,
+      "sha256": "3801f4564f92ac3f43bd4d9854ef41cfd569eb8a0efc0737f8b3b4cb65f2e4c2"
+    },
+    {
+      "path": "docs/SENSOR_IFC_MAPPING_REPORT.md",
+      "bytes": 23473,
+      "sha256": "7eb058825c68050559749c7a126e22c192d41f598d20e45bcb2a555d385a431d"
     },
     {
       "path": "frontend/public/models/campus_twin.glb",
@@ -387,11 +413,6 @@
       "sha256": "41b7251528612d00546f922d063fa6f0020bd1f1eb1ed249c34471e8f30474a0"
     },
     {
-      "path": "frontend/src/main.tsx",
-      "bytes": 234,
-      "sha256": "be2b83aebf64ac37b062f01196ba2749db2d96b8dc18ff3bb3ba3d4dae796fe8"
-    },
-    {
       "path": "frontend/src/pages/DigitalTwin.tsx",
       "bytes": 29337,
       "sha256": "a6378b6e7b4c7d22b682eb000efa250681755329bbcaa15901305f39fddfac3b"
@@ -402,104 +423,69 @@
       "sha256": "8247d9d0c72ae24dec9c22026b50828762b8def706f7098d8a5e80e16f2f28b3"
     },
     {
-      "path": "frontend/src/pages/Intelligence.tsx",
-      "bytes": 12207,
-      "sha256": "a210e04731af3d312b35d72b908f7bbc02d2dadb8341ddedd04adcaac83fd1c7"
+      "path": "output/campus_registry.json",
+      "bytes": 571533,
+      "sha256": "e01e69daefe2a818cb751fe00cd2f02cc462ef7711c99e85feb5b3b59457e660"
     },
     {
-      "path": "frontend/src/pages/IntelligenceRecommendations.test.tsx",
-      "bytes": 6738,
-      "sha256": "26db808c038a075c7fb6e204c843451bb5005a5508f2db55f3dcde3785bb1865"
+      "path": "output/resource_state.json",
+      "bytes": 998179,
+      "sha256": "ee8aeb3f642c679dcb22460f986cc370e887095ee8f9f4c05c1317637e20bc4a"
     },
     {
-      "path": "frontend/src/pages/Overview.tsx",
-      "bytes": 24617,
-      "sha256": "0c198d515e7e805b38bde6fc35d1ff595c0bf5334c8718be8a8a93871cafa874"
+      "path": "output/sensor_ifc_mapping.json",
+      "bytes": 190312,
+      "sha256": "ef9fb7289f3a4998e7abc25e44e41e33af347ff3695d76d856e92ce3bafb96b1"
     },
     {
-      "path": "frontend/src/pages/RecDetail.tsx",
-      "bytes": 9812,
-      "sha256": "3b1a1711ddcf56bb2eac42c24efdc9101d01dfb7b4d23a828e3f63c61261f077"
+      "path": "output/spaces.json",
+      "bytes": 568847,
+      "sha256": "4da6a6d1b2afb3d43e9235150fbbbbeb6f505d3afc6d7df4bc7c3a4b2b6c3fc6"
     },
     {
-      "path": "frontend/src/pages/Vision.test.tsx",
-      "bytes": 3794,
-      "sha256": "0b31ea80c7161653c347f698c41a6fbdcb6acdf32b05d391b6fc42ff146f57bd"
+      "path": "requirements.txt",
+      "bytes": 47,
+      "sha256": "8ad97cd3b386300b0f41366e99be3fe55beb1e5ade49e2c001a4c0bc7f1740b8"
     },
     {
-      "path": "frontend/src/pages/Vision.tsx",
-      "bytes": 10167,
-      "sha256": "b94a1d5a45f2af47d63c502674cd9e22085f222358479d24cb8133631cb848be"
+      "path": "scripts/build_real_twin.py",
+      "bytes": 22064,
+      "sha256": "4847d487e00315d845e2dd63f56b4abf6b676f5b0595c9c7ce2105cb95e9fc13"
     },
     {
-      "path": "frontend/src/pages/intelligenceTabs.tsx",
-      "bytes": 27307,
-      "sha256": "da9f7c5945e87b4a1b331df1110f5e05de93cfe96418b21b0537e692fc432dd1"
+      "path": "scripts/build_twin.py",
+      "bytes": 13507,
+      "sha256": "90cd8e94842b9a6a011811a1c9f7b7067aa779e06b14be051d4b29f588a788e0"
     },
     {
-      "path": "frontend/src/test/setup.ts",
-      "bytes": 6476,
-      "sha256": "cced23e6165d9d93176729517a4e376436b584805f053b48900129cfd3ed29a2"
+      "path": "scripts/extract_ifc_spaces.py",
+      "bytes": 10043,
+      "sha256": "c8d457fed2174c96300be47dea5ba0d1e2e145725c464051e46af2416bd81100"
     },
     {
-      "path": "frontend/src/vision/VisionProvider.tsx",
-      "bytes": 6226,
-      "sha256": "57dc648c996193b77fa5fe35b78150126cc0de1ec696f785bd74b97ad93d23dc"
+      "path": "scripts/investigate_sensor_ifc_mapping.py",
+      "bytes": 36492,
+      "sha256": "21669059570cba7a15003d551a35fff34bae9cfbff804af474ab061cecf4bb43"
     },
     {
-      "path": "frontend/src/vision/cameraSource.test.tsx",
-      "bytes": 2061,
-      "sha256": "0b42f177831be75b8734e633e8f15181bd933ee426685145fa67fbe7dd931f29"
+      "path": "scripts/resource_state.py",
+      "bytes": 14388,
+      "sha256": "9ba06d8114df448798e4ecbe6865288d15c44fe2d91a9db5c8f2ca1cda6fc87c"
     },
     {
-      "path": "frontend/src/vision/cameraSource.ts",
-      "bytes": 3514,
-      "sha256": "76e4b7b6d6cb6938c01a3814673d44fafb657c481974b8247567f071e036dfe5"
+      "path": "scripts/telemetry_config.py",
+      "bytes": 8311,
+      "sha256": "b9f4a216e48e23155fcfa2a16962d4704806f7b4003644000882cd75dfa34762"
     },
     {
-      "path": "frontend/src/vision/demoMapping.test.ts",
-      "bytes": 3237,
-      "sha256": "9598ce21a97e37c2e4892991627d01bab9b4f9bf5fe2d85ceb4b754c39843025"
+      "path": "tests/test_campus_registry.py",
+      "bytes": 8244,
+      "sha256": "a530fdc20f6058fcc8567ba9b9208cbfa35c51ff74be384e2ffe15c9a052e267"
     },
     {
-      "path": "frontend/src/vision/demoMapping.ts",
-      "bytes": 4132,
-      "sha256": "77ee3b768685b907655d5ccd1c8fcb99fe9f0128019b3d7ae48fad2e2041774c"
-    },
-    {
-      "path": "frontend/src/vision/visionContext.ts",
-      "bytes": 1889,
-      "sha256": "cb788d55b041a32f53fd935b4b094de22adf2c868925b8baebc6a5dce31cc706"
-    },
-    {
-      "path": "frontend/src/vite-env.d.ts",
-      "bytes": 157,
-      "sha256": "7a8c17950372cee8c284e485687b87c8d222659038dc06044f49c7832365f031"
-    },
-    {
-      "path": "frontend/tsconfig.app.json",
-      "bytes": 673,
-      "sha256": "4d37777ce31ce1bd1e8a2acadc51938561a13d6550177d4bc88e68c901389397"
-    },
-    {
-      "path": "frontend/tsconfig.json",
-      "bytes": 119,
-      "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
-    },
-    {
-      "path": "frontend/tsconfig.node.json",
-      "bytes": 558,
-      "sha256": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8"
-    },
-    {
-      "path": "frontend/vercel.json",
-      "bytes": 95,
-      "sha256": "399b20ae790e3521a82c85d3f3b7ec65cd0d332c63a19c4c4b2d90b5926d28e2"
-    },
-    {
-      "path": "frontend/vite.config.ts",
-      "bytes": 1082,
-      "sha256": "c41956581d702e5aec7e93c86b97e6d657fd5c878d214a07303908866ef95127"
+      "path": "tests/test_sensor_ifc_mapping.py",
+      "bytes": 6187,
+      "sha256": "d067ea0c238d9ee81307f44f606a7c9a71a62a09a2a5e11a9ab1be1eba63b286"
     }
   ]
 }
