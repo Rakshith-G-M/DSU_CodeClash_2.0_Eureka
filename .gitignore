@@ -1,2 +1,28 @@
+# Environment files — real credentials must never be committed.
+# `.env` holds OPENROUTER_API_KEY (backend-only). `.env.example` is the safe
+# template and stays tracked.
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# OS / editor noise
+.DS_Store
+*.tmp
+*.temp
 
 .DS_Store
