@@ -1,4 +1,70 @@
 {
+  "package": "GreenTwin_Frontend_CV_GenAI.zip",
+  "role": "role-frontend",
+  "title": "Frontend, Computer Vision & GenAI UI",
+  "source_project": "the-commit-crew",
+  "file_count": 99,
+  "total_bytes": 28158698,
+  "files": [
+    {
+      "path": "CONTRIBUTOR_GUIDE.md",
+      "bytes": 5734,
+      "sha256": "0735c2b9505e17ce2e25d00f33fd7d8375008a29d413acf5f8c566a60dda1e3d"
+    },
+    {
+      "path": "docs/CV1_CAMERA_OCCUPANCY.md",
+      "bytes": 3938,
+      "sha256": "b367da798d57ae27bdc7c6560fa88c8fd8663c047c77562d9aeaa8eacf2aa3ec"
+    },
+    {
+      "path": "docs/CV2_ROOM_OCCUPANCY_TELEMETRY.md",
+      "bytes": 2222,
+      "sha256": "1af2028e8fdfe8e17d5d12abe1b9dd3cf62e82eea539ea78056c7c11deb8d285"
+    },
+    {
+      "path": "docs/CV3_CAMERA_SOURCE_ARCHITECTURE.md",
+      "bytes": 8874,
+      "sha256": "af50f016d736e29c7fc6796583d19a38caa8520381e20a5c143e557a2e5d8421"
+    },
+    {
+      "path": "docs/M8_PRODUCT_UI.md",
+      "bytes": 8401,
+      "sha256": "6044712a46e09907784f005b17cc547ac253aef1122ea6cdca76d619131687b5"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "bytes": 443,
+      "sha256": "7fd6f85a090fda92be24f1eb14340d3d8e57a6ebeb54b27d3fa51817038d5354"
+    },
+    {
+      "path": "frontend/.oxlintrc.json",
+      "bytes": 291,
+      "sha256": "58048ea6d1a04cf4169c9431771b9790f83f78a9fe3db0b8eab442e03c21946e"
+    },
+    {
+      "path": "frontend/README.md",
+      "bytes": 1811,
+      "sha256": "222650f6a46ae16dce4743ea6b6362723b6ac0d207454dbaea838b1538ba4720"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 724,
+      "sha256": "c4eb4219b6f07b04e232dc598d606df9b6d34d7013c378d3502ed0921f62eab1"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 109369,
+      "sha256": "f9116a944d7d89c591cdd0dcb242748c6711175801510825f758e251ea651d5d"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 1002,
+      "sha256": "50317d07b37000b24dd7aa662c99e161d9d6a5e35bab5144f0cfbe8766f65bcd"
+    },
+    {
+      "path": "frontend/public/favicon.svg",
+      "bytes": 649,
+      "sha256": "c663974a9d8b1918724b505e59b2c06bf10ca3dbe7384c0c9cee3277b88dbc58"
   "package": "GreenTwin_BIM_DigitalTwin.zip",
   "role": "role-bim-twin",
   "title": "BIM & Digital Twin",
@@ -47,6 +113,121 @@
       "sha256": "eb03e1b61e1d52e659429a07c0a9a98d036e3cfd9a52856e883437ba48e4996f"
     },
     {
+      "path": "frontend/public/vision/models/efficientdet_lite0_int8.tflite",
+      "bytes": 4602795,
+      "sha256": "0720bf247bd76e6594ea28fa9c6f7c5242be774818997dbbeffc4da460c723bb"
+    },
+    {
+      "path": "frontend/public/vision/wasm/vision_wasm_internal.js",
+      "bytes": 203819,
+      "sha256": "33a4125f825b343d2d9773951a73692f40bee368c9b591af8ff652fd501af90b"
+    },
+    {
+      "path": "frontend/public/vision/wasm/vision_wasm_internal.wasm",
+      "bytes": 9514390,
+      "sha256": "c88cf472dd5cab0a3954b071e5f442102ded3701dcccc987a7a02ee8f54aae85"
+    },
+    {
+      "path": "frontend/public/vision/wasm/vision_wasm_nosimd_internal.js",
+      "bytes": 203672,
+      "sha256": "4e8d07dcf8cbb55b343cd76b7fc30d4303220f049d5529d6412f6f93296726a8"
+    },
+    {
+      "path": "frontend/public/vision/wasm/vision_wasm_nosimd_internal.wasm",
+      "bytes": 9379090,
+      "sha256": "f840f69d7229f89dedaed39c7ac7a52f0964a7cec02d6cb1ac9eff891db86dc2"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "bytes": 2731,
+      "sha256": "c96ca42d9223cb45ab8902024e0dd2c93f00cb955b8a1d4f1722136a969e6773"
+    },
+    {
+      "path": "frontend/src/ai/FindingAnalysis.test.tsx",
+      "bytes": 19930,
+      "sha256": "3195cb79e53ad04f0c8fcbdafe45989dff0c251d2e148c405bd685a159dc1b39"
+    },
+    {
+      "path": "frontend/src/ai/FindingAnalysis.tsx",
+      "bytes": 25462,
+      "sha256": "39a82db5ea148d97fb0418432f255f22cce5cc0cda571dfd7768c100cb329470"
+    },
+    {
+      "path": "frontend/src/ai/RecommendationList.test.tsx",
+      "bytes": 3232,
+      "sha256": "9a9f4350f47a4b0ed730490cdbc7343b24a539324ec3397c597b255a194edbad"
+    },
+    {
+      "path": "frontend/src/ai/RecommendationList.tsx",
+      "bytes": 5917,
+      "sha256": "a0c9237af30d41481fbb75938b7659d7c9bf2906f8ab5195fa9a7ea764145f50"
+    },
+    {
+      "path": "frontend/src/ai/RoomAnalysis.test.tsx",
+      "bytes": 15311,
+      "sha256": "19e16c3a0e5bd073aa74e30b4562128707b3ea50f0580a86f32e28753a7eb853"
+    },
+    {
+      "path": "frontend/src/ai/RoomAnalysis.tsx",
+      "bytes": 21920,
+      "sha256": "81c5f87fa43497112507d3482bda60d0f6914d97935a514d108116f6378327c9"
+    },
+    {
+      "path": "frontend/src/ai/noSecrets.test.ts",
+      "bytes": 2699,
+      "sha256": "ceb95bb45549c10996b660d396f2695c671f4c18fb075fe1ba08c3417b0d8fba"
+    },
+    {
+      "path": "frontend/src/ai/presentation.test.ts",
+      "bytes": 5302,
+      "sha256": "252b7d08dd5fcb55f0522e6d8611bcf52143dbb02fd01d21977172e919423cc1"
+    },
+    {
+      "path": "frontend/src/ai/presentation.ts",
+      "bytes": 8340,
+      "sha256": "e1f1d5414c226ca8b2ffcd060f7d653cbe1a8eaa74d69610c371d09f445b4806"
+    },
+    {
+      "path": "frontend/src/ai/roomIntelligence.test.ts",
+      "bytes": 10266,
+      "sha256": "17009c1319bd09a95c101c7a7a30aa52855aacfa8154bda41335d92b8a789df8"
+    },
+    {
+      "path": "frontend/src/ai/roomIntelligence.ts",
+      "bytes": 11015,
+      "sha256": "5f79b4629923712e5e7403a3ab0778a56af26a3a5a0f152ae02c27ba563216f4"
+    },
+    {
+      "path": "frontend/src/ai/useRoomIntelligence.test.tsx",
+      "bytes": 13231,
+      "sha256": "2653c6001e4d5a5dc295e49a560441657c967bc4a93410d63233896c84986829"
+    },
+    {
+      "path": "frontend/src/ai/useRoomIntelligence.ts",
+      "bytes": 10432,
+      "sha256": "3b6f73e08cb8adf94cb22964f29002c7bd3b828c291a320484a9fdcb2d7aea4d"
+    },
+    {
+      "path": "frontend/src/api/client.test.ts",
+      "bytes": 1983,
+      "sha256": "6af5bb5c63ead71274f670151f495a2127db382d3df9fa70b359e74411134ad3"
+    },
+    {
+      "path": "frontend/src/api/client.ts",
+      "bytes": 1619,
+      "sha256": "f57943068769c78d2dc9936698ac6822537c6b0278bf5479cc0947bd5c9e0a3d"
+    },
+    {
+      "path": "frontend/src/api/index.ts",
+      "bytes": 5359,
+      "sha256": "1da4256ec2bfaad2f2eb9a6ce05c322c77e617d8aadddcecdf43a834ab22ba08"
+    },
+    {
+      "path": "frontend/src/api/types.ts",
+      "bytes": 13693,
+      "sha256": "3467a32422c608ed38be2684c3bf1b3a2f3baf3dc191799874f5e717c5ee6c5e"
+    },
+    {
       "path": "frontend/src/components/BimSpacePanel.test.tsx",
       "bytes": 6071,
       "sha256": "f21c5df980b104c1d465281df419eac9ed09919cda8e210ea7dbda0b6edf03c4"
@@ -57,9 +238,174 @@
       "sha256": "ca531eae5ddb0c6b4005a78cca1d97e4e107d522bbeff0302b8e09c6db828677"
     },
     {
+      "path": "frontend/src/components/ReplayBar.test.tsx",
+      "bytes": 784,
+      "sha256": "4374cbf3b1fcb0dd4863813643e93b22b666db7c00dd0c45c2f313b246917b50"
+    },
+    {
+      "path": "frontend/src/components/ReplayBar.tsx",
+      "bytes": 14153,
+      "sha256": "5ebdc49c265cfe09d1d2cbac543c31482090cde30bf35f0cfa53362424c0327b"
+    },
+    {
       "path": "frontend/src/components/TwinViewer.tsx",
       "bytes": 25193,
       "sha256": "b0f292d43da1edfac3785ce058c0a0893f10bd5bd3a6efd55e9cdc14d8f97e31"
+    },
+    {
+      "path": "frontend/src/components/common.tsx",
+      "bytes": 11685,
+      "sha256": "95ffb0403ba2f2d545eed725c8b1db276af615c54f8ea7a4a2aeb5d75ffacc3e"
+    },
+    {
+      "path": "frontend/src/components/icons.tsx",
+      "bytes": 10981,
+      "sha256": "f433ba0f49df722380a8fc15b8836bc3039a07d65b08069654e5290a158834d1"
+    },
+    {
+      "path": "frontend/src/components/layout.tsx",
+      "bytes": 7588,
+      "sha256": "340b3d0234eff02d48689a4ed194718de0cfcabc85aa90877af9eee608a9f66f"
+    },
+    {
+      "path": "frontend/src/components/vision/BuildingTelemetry.test.tsx",
+      "bytes": 1747,
+      "sha256": "7600b92d037ca8d48f607ea148c7fdabe9bfcafa59b8dc64688806a075d39889"
+    },
+    {
+      "path": "frontend/src/components/vision/BuildingTelemetry.tsx",
+      "bytes": 7474,
+      "sha256": "53bf40642adbe6481c19d94268ba372e796412ca8a24c88932fc463654047dcd"
+    },
+    {
+      "path": "frontend/src/components/vision/CameraPanel.tsx",
+      "bytes": 7257,
+      "sha256": "6ffe711c2409cb7756093dfcdbc64d261582a08c5f3a909d92cb6925d118d876"
+    },
+    {
+      "path": "frontend/src/components/vision/DemoMappingPicker.tsx",
+      "bytes": 4574,
+      "sha256": "f34f5433c44624b9d8e4c8e838c7fdf79163db76f8c984b42e64a5ca772aebb1"
+    },
+    {
+      "path": "frontend/src/components/vision/OccupancyOverlay.tsx",
+      "bytes": 1961,
+      "sha256": "379c534aa7372224b41281d4fb7ea138509e64011ff78ab9e88e02710c5dd190"
+    },
+    {
+      "path": "frontend/src/components/vision/RoomLiveMonitor.test.tsx",
+      "bytes": 4635,
+      "sha256": "73eb4f5fda62447bfc73fca04debc063cc37af0ecb9e7ec3a291721f12972ad5"
+    },
+    {
+      "path": "frontend/src/components/vision/RoomLiveMonitor.tsx",
+      "bytes": 11328,
+      "sha256": "b49f6f3dea3d2e0137ba03fa9973f5af9b766726fe9e4c43edb6e08a4229ed3a"
+    },
+    {
+      "path": "frontend/src/components/vision/provenance.test.ts",
+      "bytes": 3967,
+      "sha256": "cf6ddd3ea07b6122bae90bae798ae9322d494c087b5b8812159d81b01e47754a"
+    },
+    {
+      "path": "frontend/src/components/vision/provenance.ts",
+      "bytes": 6752,
+      "sha256": "a8a5c592df6df2c604716c2c2d23ae6b41634b9428892ef97105b05e7274f378"
+    },
+    {
+      "path": "frontend/src/components/vision/replayPresentation.test.ts",
+      "bytes": 3648,
+      "sha256": "d1236587c302d29359388623d9c484ba1134f6eb0f420fec8289f19b834a14ae"
+    },
+    {
+      "path": "frontend/src/components/vision/replayPresentation.ts",
+      "bytes": 4410,
+      "sha256": "7332cc14780a147fa03a245e6dacf55b42e3c209b8c63a59869107a93dfb312a"
+    },
+    {
+      "path": "frontend/src/components/vision/visionTypes.ts",
+      "bytes": 3170,
+      "sha256": "ac2d620129d01eadbdb9d88cc65fd5a907490af47977d7e84b1f47c3402b120e"
+    },
+    {
+      "path": "frontend/src/hooks/useApi.ts",
+      "bytes": 1611,
+      "sha256": "bdd27a94352053327a1b58105e4f71bab5b044a31aec1362ac1eb398c01ea15e"
+    },
+    {
+      "path": "frontend/src/hooks/useCameraSource.ts",
+      "bytes": 1458,
+      "sha256": "34140a1a45187921c59853c154e833fcb2ab8c73cfbf5a59fb05880493e9308b"
+    },
+    {
+      "path": "frontend/src/hooks/useCameraStream.test.tsx",
+      "bytes": 3738,
+      "sha256": "19354a5818b738db54e9c86163962f53a142e23a1bf1c739c87cae8f6c5154b2"
+    },
+    {
+      "path": "frontend/src/hooks/useCameraStream.ts",
+      "bytes": 4300,
+      "sha256": "5573ac111dc44c4bdad66807c9374132eb4006cd4ddbe88be124455372e41eeb"
+    },
+    {
+      "path": "frontend/src/hooks/useObjectDetector.test.tsx",
+      "bytes": 3374,
+      "sha256": "985ffd1e9e785015fb3cb046871f4ddf251ac3f967fb825a04bc183fadbbb45a"
+    },
+    {
+      "path": "frontend/src/hooks/useObjectDetector.ts",
+      "bytes": 4925,
+      "sha256": "c6a81401f8b147baa48ebec1add1395024e0c64f1a8beef257d0bb6a197e28a4"
+    },
+    {
+      "path": "frontend/src/hooks/useReplay.ts",
+      "bytes": 5038,
+      "sha256": "3862ce3753bfcdb55318db45edc268775eccc6e4a9f3bca4ae8e93ae05f67565"
+    },
+    {
+      "path": "frontend/src/index.css",
+      "bytes": 8231,
+      "sha256": "b4d0b95fdbbda23848cb22e03437d85257b8ec1db248af994b7152c867c72d2e"
+    },
+    {
+      "path": "frontend/src/lib/anomaly.test.ts",
+      "bytes": 3672,
+      "sha256": "ba853267dd919c5c353841513cc7a4034c4f58f2777b12877b473491397bf781"
+    },
+    {
+      "path": "frontend/src/lib/anomaly.ts",
+      "bytes": 4016,
+      "sha256": "5eb22f27382e2501c6ee8c4299107c93d4365967609e02f98cac9fb2ab769c80"
+    },
+    {
+      "path": "frontend/src/lib/format.test.ts",
+      "bytes": 4396,
+      "sha256": "82a2b3c4bf1fa1093eeedab0fcd9fbb728cf7ed2429707363c605ba0826f2056"
+    },
+    {
+      "path": "frontend/src/lib/format.ts",
+      "bytes": 9028,
+      "sha256": "6f9f2de8efc63c666a725ecc3781589ae74a31f0e591c5c1e736f0e2f29562f2"
+    },
+    {
+      "path": "frontend/src/lib/recPresentation.ts",
+      "bytes": 14813,
+      "sha256": "ed131a6423fe585669f88650d31b4f3c8835fa61e7fdb465f5ee7f61155c7b98"
+    },
+    {
+      "path": "frontend/src/lib/roomStatus.test.ts",
+      "bytes": 11598,
+      "sha256": "3330f9e7439b70ce8689164644c724e5ab93a2984422be423a08f8c6edf3b0f7"
+    },
+    {
+      "path": "frontend/src/lib/roomStatus.ts",
+      "bytes": 17983,
+      "sha256": "59575fa555e81bca889c6c4533026f24fca55840ade40046e0c732bd549ea907"
+    },
+    {
+      "path": "frontend/src/lib/sensorsData.ts",
+      "bytes": 5235,
+      "sha256": "5a028c471f5b52bd9209dbfd9a3d76319abc05ec591e1884fd3fdaa51122122f"
     },
     {
       "path": "frontend/src/lib/spacesData.ts",

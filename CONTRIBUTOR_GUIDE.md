@@ -1,23 +1,24 @@
-# Green Twin — Contributor Package: BIM & Digital Twin
+# Green Twin — Contributor Package: Frontend, Computer Vision & GenAI UI
 
-**Package:** `GreenTwin_BIM_DigitalTwin.zip`
-**Role:** `role-bim-twin` — BIM and Digital Twin
-**Application root (central repository):** the Green Twin project root that contains `scripts/`, `tests/`, `docs/`, `output/`, `frontend/`, `DS3_TalTech_V4.ifc` and `Taltech.zip`.
+**Package:** `GreenTwin_Frontend_CV_GenAI.zip`
+**Role:** `role-frontend` — React frontend, Computer Vision workflow and integrated AI user experience
+**Application root (central repository):** the Green Twin project root that contains `frontend/`, `scripts/`, `tests/`, `docs/`, `output/`, `DS3_TalTech_V4.ifc` and `Taltech.zip`.
 
 ---
 
 ## 1. Purpose
 
-This package owns everything that turns the raw IFC4 building model into the
-spatial foundation used by the rest of Green Twin:
+This package owns the entire browser experience of Green Twin:
 
-* IFC4 space/storey extraction from `DS3_TalTech_V4.ifc`.
-* The canonical campus registry (`campus_registry.json`, `spaces.json`).
-* The resource/geometry state (`resource_state.json`).
-* The sensor↔IFC mapping investigation (`sensor_ifc_mapping.json`).
-* The 3D digital twin artifacts (glTF/GLB meshes + manifests).
-* The Twin UI pieces: 3D viewer, BIM space panel, Digital Twin page,
-  floor navigation, room selection and geometry data access.
+* The React + TypeScript + Vite application (pages, layout, styling).
+* The Digital Twin room inspector UI (room selection, floor navigation, live
+  status), which consumes the BIM-owned geometry.
+* The Computer Vision / camera occupancy workflow (camera source, object
+  detection, occupancy overlay, room live monitor, provenance badges).
+* The integrated AI user experience: room analysis, finding analysis,
+  recommendation lists, confidence badges, action-first "next action" surfacing
+  and collapsible evidence.
+* The frontend test suite.
 
 ## 2. Included files
 
@@ -25,102 +26,86 @@ See `MANIFEST.json` for the exact list with sizes and SHA-256 checksums.
 
 | Area | Files |
 |---|---|
-| Source model | `DS3_TalTech_V4.ifc` (the real IFC4 model, ~37 MB) |
-| Extraction | `scripts/extract_ifc_spaces.py`, `scripts/investigate_sensor_ifc_mapping.py` |
-| Twin build | `scripts/build_twin.py`, `scripts/build_real_twin.py` |
-| State | `scripts/resource_state.py` |
-| Shared config | `scripts/telemetry_config.py` (required import of `resource_state.py`) |
-| Tests | `tests/test_campus_registry.py`, `tests/test_sensor_ifc_mapping.py` |
-| Data outputs | `output/campus_registry.json`, `output/spaces.json`, `output/resource_state.json`, `output/sensor_ifc_mapping.json` |
-| 3D assets | `frontend/public/models/campus_twin.glb`, `campus_twin_schematic.glb`, `twin_manifest.json`, `twin_manifest_schematic.json` |
-| Twin UI | `frontend/src/components/TwinViewer.tsx`, `frontend/src/components/BimSpacePanel.tsx` (+ test), `frontend/src/pages/DigitalTwin.tsx` (+ deep-link test), `frontend/src/lib/spacesData.ts` |
-| Docs | `docs/M2_EXTERNAL_MAPPING_RESEARCH.md`, `docs/SENSOR_IFC_MAPPING_REPORT.md` |
+| App root | `frontend/index.html`, `frontend/package.json`, `frontend/package-lock.json`, `frontend/vite.config.ts`, `frontend/tsconfig*.json`, `frontend/vercel.json`, `frontend/.oxlintrc.json`, `frontend/.gitignore`, `frontend/README.md` |
+| Pages | `frontend/src/pages/*` (Overview, DigitalTwin, Intelligence, Vision, RecDetail, …) |
+| Components | `frontend/src/components/*` (layout, common, icons, TwinViewer, BimSpacePanel, ReplayBar, `vision/*`) |
+| AI UX | `frontend/src/ai/*` (RoomAnalysis, FindingAnalysis, RecommendationList, presentation, roomIntelligence, hooks) |
+| CV / vision | `frontend/src/vision/*`, `frontend/src/hooks/useCamera*`, `useObjectDetector`, `frontend/src/components/vision/*` |
+| API client | `frontend/src/api/*` (client, types, index) |
+| State / lib | `frontend/src/lib/*`, `frontend/src/hooks/useApi.ts`, `useReplay.ts`, `frontend/src/test/setup.ts` |
+| 3D assets | `frontend/public/models/*` (glTF meshes + manifests) |
+| CV assets | `frontend/public/vision/models/efficientdet_lite0_int8.tflite`, `frontend/public/vision/wasm/*` (MediaPipe vision task) |
+| Misc | `frontend/public/favicon.svg` |
+| Docs | `docs/CV1_CAMERA_OCCUPANCY.md`, `CV2_ROOM_OCCUPANCY_TELEMETRY.md`, `CV3_CAMERA_SOURCE_ARCHITECTURE.md`, `M8_PRODUCT_UI.md` |
 
 ## 3. Excluded files (and how to obtain them)
 
-To avoid duplicating large datasets, the following **shared assets are owned by
-other packages** and are intentionally *not* inside this ZIP. Obtain them from
-the central repository at the paths shown:
-
 | Excluded asset | Owned by | How to obtain |
 |---|---|---|
-| `Taltech.zip` (~5.5 MB raw sensor export) | Analytics (`GreenTwin_Analytics_Backend.zip`) | Copy the file from the repository root, or from the analytics package. |
-| `data/extracted/*.csv` (69 CSVs, ~112 MB) | regenerable | `unzip Taltech.zip -d data/extracted` (the archive stores the CSVs flat at its root). |
-| `output/*.json` other than the four listed above | Analytics | Copy from `output/` in the repository root, or run the analytics pipeline. |
-| Full React app, CV workflow, AI UI | Frontend (`GreenTwin_Frontend_CV_GenAI.zip`) | The Twin UI files listed above are also carried by the frontend package so it builds; keep them identical. |
-
-> **Note:** `tests/test_sensor_ifc_mapping.py` reads `Taltech.zip` **and**
-> `data/extracted/*.csv`. Those are analytics-owned/regenerable, so this test
-> requires the two steps in the table above before it will pass in isolation.
+| `frontend/node_modules/` | regenerable | `npm ci` (or `npm install`) inside `frontend/`. |
+| `frontend/dist/` | regenerable | `npm run build`. |
+| Backend Python (`scripts/*.py`) | Analytics (`GreenTwin_Analytics_Backend.zip`) | The frontend talks to it over HTTP (`/api/*`); run the backend from the analytics package or the central repo. |
+| `scripts/room_status.py` | Analytics | The frontend mirror `frontend/src/lib/roomStatus.ts` must stay in sync with it. |
+| IFC model & twin build scripts | BIM (`GreenTwin_BIM_DigitalTwin.zip`) | The GLB meshes are shipped here so the app runs; regenerate them only via the BIM package. |
+| `.env`, credentials, `.git`, caches | — | Never shipped in any package. |
 
 ## 4. Setup
 
 ```bash
-# 1. Work in the application root of the central repository.
-# 2. Python environment
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-# build_real_twin.py also needs the IFC geometry engine:
-pip install ifcopenshell
-
-# 3. Materialise the shared telemetry assets (if you want the full test suite)
-unzip -o Taltech.zip -d data/extracted
+cd frontend
+npm ci                # or: npm install
+npm run dev           # Vite dev server (expects the backend on http://localhost:8000)
 ```
 
-## 5. Tests
+The dev server proxies API calls to the backend; start the Analytics package's
+`uvicorn scripts.api_app:app --port 8000` first (or point the client at your
+backend URL).
+
+## 5. Tests & quality gates
 
 ```bash
-# from the application root
-python -m pytest tests/test_campus_registry.py -q
-python -m pytest tests/test_sensor_ifc_mapping.py -q   # needs Taltech.zip + data/extracted
+cd frontend
+npm test              # vitest run
+npm run typecheck     # tsc -b
+npm run lint          # oxlint
+npm run build         # tsc -b && vite build
 ```
 
-Both test modules are **read-only** with respect to the source data (the IFC size
-and SHA-256, and the ZIP size, are pinned by the tests).
-
-Rebuild the twin after editing geometry code:
-
-```bash
-python scripts/extract_ifc_spaces.py     # -> output/campus_registry.json, output/spaces.json
-python scripts/build_real_twin.py        # -> frontend/public/models/*.glb + manifests
-python scripts/resource_state.py         # -> output/resource_state.json
-```
+> The CV end-to-end path needs a real camera + MediaPipe. In jsdom there is no
+> `getUserMedia`/MediaPipe, so tests use fakes; do not claim live-camera success
+> from CI alone.
 
 ## 6. Required environment variables
 
-None for BIM/twin code. (The `.env` file belongs to Analytics/GenAI and is
-**never** shipped in any package.)
+None required for the frontend build. If you point the app at a non-default
+backend, configure the API base URL in the Vite/client config (`frontend/src/api/client.ts`).
+The AI provider key lives **only** in the backend `.env` and is never exposed to
+the browser.
 
 ## 7. Shared dependencies & cross-role contracts
 
-* `scripts/telemetry_config.py` — shared path/constant module. `resource_state.py`
-  imports `RESOURCE_STATE` from it. Treat it as a **shared contract**; do not
-  rename its public constants.
-* `scripts/investigate_sensor_ifc_mapping.py` — produces `output/sensor_ifc_mapping.json`
-  and is imported by `scripts/extract_ifc_spaces.py` (this package) and by
-  Analytics (`ingest_sensor_data.py`, `telemetry_profile.py`).
-* **API contract:** the FastAPI backend (Analytics) serves `spaces.json`,
-  `campus_registry.json`, `resource_state.json` and `sensor_ifc_mapping.json`
-  under `/api/*`. The JSON shapes are the contract — do not change keys/units
-  without updating the backend and the frontend consumers in lockstep.
-* **Frontend contract:** `TwinViewer.tsx` / `BimSpacePanel.tsx` /
-  `spacesData.ts` are also published by the frontend package. Keep the copies
-  byte-identical; coordinate before changing props or JSON expectations.
+* **API contract** — `frontend/src/api/types.ts` mirrors the backend response
+  models (`api_app.py` / `ai_schemas.py`). Field renames must be coordinated with
+  Analytics.
+* **Room status** — `frontend/src/lib/roomStatus.ts` mirrors
+  `scripts/room_status.py` (Analytics). Keep the decision rules identical.
+* **Recommendations** — the AI surfaces render `AiRecommendation` items and the
+  normalized `confidence` field (HIGH/MEDIUM/LOW/UNKNOWN); `recommendations[0]`
+  is promoted as the single "NEXT ACTION". This matches the backend contract.
+* **Twin UI** — `TwinViewer.tsx`, `BimSpacePanel.tsx`, `DigitalTwin.tsx` and
+  `spacesData.ts` are also carried by the BIM package; keep the copies identical.
+* **JSON fixtures** — pages read from the API, not from `output/` directly.
 
 ## 8. Files that must NOT be overwritten when applying this package
 
 When applying this package onto the central repository, it must **not** replace:
 
-* anything under `frontend/src/` **other than** the Twin UI files this package
-  ships (`TwinViewer.tsx`, `BimSpacePanel.tsx`(+test), `DigitalTwin.tsx`
-  (+test), `spacesData.ts`);
-* Analytics-owned scripts (`api_app.py`, `ingest_sensor_data.py`,
-  `telemetry_*.py`, `decision_*.py`, `recommendation_engine.py`,
-  `linkage_engine.py`, `replay_engine.py`, `room_status.py`, `building_context.py`,
-  `ai_*.py`, `forecaster.py`);
-* AI/CV docs and the CV assets under `frontend/public/vision/`;
-* `.env`, `.git`, or any credentials.
+* any backend Python (`scripts/**`), the IFC model, or `output/**`;
+* the BIM-owned copies of the twin UI files with divergent versions — reconcile
+  with the BIM package;
+* `.env`, `.git`, `node_modules`, or credentials;
+* the CV model/WASM assets with different versions (the detector expects the
+  bundled MediaPipe files).
 
-If a conflict occurs on a shared file (`telemetry_config.py`,
-`investigate_sensor_ifc_mapping.py`), stop and reconcile manually — do not
-blindly overwrite.
+If a conflict occurs on a shared file (`roomStatus.ts` vs `room_status.py`,
+`api/types.ts` vs backend schemas), stop and reconcile manually.
