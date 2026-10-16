@@ -24,3 +24,5 @@ dist-ssr/
 .DS_Store
 *.tmp
 *.temp
+
+.DS_Store

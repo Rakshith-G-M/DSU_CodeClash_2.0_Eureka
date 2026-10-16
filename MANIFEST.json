@@ -1,0 +1,145 @@
+{
+  "package": "GreenTwin_BIM_DigitalTwin.zip",
+  "role": "role-bim-twin",
+  "title": "BIM & Digital Twin",
+  "source_project": "the-commit-crew",
+  "file_count": 27,
+  "total_bytes": 44814637,
+  "files": [
+    {
+      "path": "CONTRIBUTOR_GUIDE.md",
+      "bytes": 6288,
+      "sha256": "471af826cb1ee70b9c4a4b465122b910179d6bf2937da0277671de0c0d0b64bf"
+    },
+    {
+      "path": "DS3_TalTech_V4.ifc",
+      "bytes": 38728810,
+      "sha256": "05919eee0701b955d3d08501c4889c879d9c486e2389a6a1a5cdaad32a5d10ba"
+    },
+    {
+      "path": "docs/M2_EXTERNAL_MAPPING_RESEARCH.md",
+      "bytes": 9505,
+      "sha256": "3801f4564f92ac3f43bd4d9854ef41cfd569eb8a0efc0737f8b3b4cb65f2e4c2"
+    },
+    {
+      "path": "docs/SENSOR_IFC_MAPPING_REPORT.md",
+      "bytes": 23473,
+      "sha256": "7eb058825c68050559749c7a126e22c192d41f598d20e45bcb2a555d385a431d"
+    },
+    {
+      "path": "frontend/public/models/campus_twin.glb",
+      "bytes": 3214284,
+      "sha256": "28bfa955f86d548e6f7ccdd91987d55b7e8e888892e873bde1bd613b968c765d"
+    },
+    {
+      "path": "frontend/public/models/campus_twin_schematic.glb",
+      "bytes": 147328,
+      "sha256": "404c7f6aa3c9ae90c0ee9af9ea0f8e2016f7cfae5ad27fc02d4274f05af04d3c"
+    },
+    {
+      "path": "frontend/public/models/twin_manifest.json",
+      "bytes": 83613,
+      "sha256": "baa3f57413f127f5bea4bda748bccd8398d7b2890ae4c0df6ad7c109de79417b"
+    },
+    {
+      "path": "frontend/public/models/twin_manifest_schematic.json",
+      "bytes": 35025,
+      "sha256": "eb03e1b61e1d52e659429a07c0a9a98d036e3cfd9a52856e883437ba48e4996f"
+    },
+    {
+      "path": "frontend/src/components/BimSpacePanel.test.tsx",
+      "bytes": 6071,
+      "sha256": "f21c5df980b104c1d465281df419eac9ed09919cda8e210ea7dbda0b6edf03c4"
+    },
+    {
+      "path": "frontend/src/components/BimSpacePanel.tsx",
+      "bytes": 17488,
+      "sha256": "ca531eae5ddb0c6b4005a78cca1d97e4e107d522bbeff0302b8e09c6db828677"
+    },
+    {
+      "path": "frontend/src/components/TwinViewer.tsx",
+      "bytes": 25193,
+      "sha256": "b0f292d43da1edfac3785ce058c0a0893f10bd5bd3a6efd55e9cdc14d8f97e31"
+    },
+    {
+      "path": "frontend/src/lib/spacesData.ts",
+      "bytes": 35768,
+      "sha256": "41b7251528612d00546f922d063fa6f0020bd1f1eb1ed249c34471e8f30474a0"
+    },
+    {
+      "path": "frontend/src/pages/DigitalTwin.tsx",
+      "bytes": 29337,
+      "sha256": "a6378b6e7b4c7d22b682eb000efa250681755329bbcaa15901305f39fddfac3b"
+    },
+    {
+      "path": "frontend/src/pages/DigitalTwinDeepLink.test.ts",
+      "bytes": 4300,
+      "sha256": "8247d9d0c72ae24dec9c22026b50828762b8def706f7098d8a5e80e16f2f28b3"
+    },
+    {
+      "path": "output/campus_registry.json",
+      "bytes": 571533,
+      "sha256": "e01e69daefe2a818cb751fe00cd2f02cc462ef7711c99e85feb5b3b59457e660"
+    },
+    {
+      "path": "output/resource_state.json",
+      "bytes": 998179,
+      "sha256": "ee8aeb3f642c679dcb22460f986cc370e887095ee8f9f4c05c1317637e20bc4a"
+    },
+    {
+      "path": "output/sensor_ifc_mapping.json",
+      "bytes": 190312,
+      "sha256": "ef9fb7289f3a4998e7abc25e44e41e33af347ff3695d76d856e92ce3bafb96b1"
+    },
+    {
+      "path": "output/spaces.json",
+      "bytes": 568847,
+      "sha256": "4da6a6d1b2afb3d43e9235150fbbbbeb6f505d3afc6d7df4bc7c3a4b2b6c3fc6"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 47,
+      "sha256": "8ad97cd3b386300b0f41366e99be3fe55beb1e5ade49e2c001a4c0bc7f1740b8"
+    },
+    {
+      "path": "scripts/build_real_twin.py",
+      "bytes": 22064,
+      "sha256": "4847d487e00315d845e2dd63f56b4abf6b676f5b0595c9c7ce2105cb95e9fc13"
+    },
+    {
+      "path": "scripts/build_twin.py",
+      "bytes": 13507,
+      "sha256": "90cd8e94842b9a6a011811a1c9f7b7067aa779e06b14be051d4b29f588a788e0"
+    },
+    {
+      "path": "scripts/extract_ifc_spaces.py",
+      "bytes": 10043,
+      "sha256": "c8d457fed2174c96300be47dea5ba0d1e2e145725c464051e46af2416bd81100"
+    },
+    {
+      "path": "scripts/investigate_sensor_ifc_mapping.py",
+      "bytes": 36492,
+      "sha256": "21669059570cba7a15003d551a35fff34bae9cfbff804af474ab061cecf4bb43"
+    },
+    {
+      "path": "scripts/resource_state.py",
+      "bytes": 14388,
+      "sha256": "9ba06d8114df448798e4ecbe6865288d15c44fe2d91a9db5c8f2ca1cda6fc87c"
+    },
+    {
+      "path": "scripts/telemetry_config.py",
+      "bytes": 8311,
+      "sha256": "b9f4a216e48e23155fcfa2a16962d4704806f7b4003644000882cd75dfa34762"
+    },
+    {
+      "path": "tests/test_campus_registry.py",
+      "bytes": 8244,
+      "sha256": "a530fdc20f6058fcc8567ba9b9208cbfa35c51ff74be384e2ffe15c9a052e267"
+    },
+    {
+      "path": "tests/test_sensor_ifc_mapping.py",
+      "bytes": 6187,
+      "sha256": "d067ea0c238d9ee81307f44f606a7c9a71a62a09a2a5e11a9ab1be1eba63b286"
+    }
+  ]
+}
