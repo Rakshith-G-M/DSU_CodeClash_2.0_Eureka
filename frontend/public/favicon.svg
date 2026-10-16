@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="11" fill="#07120d"/>
+  <rect x="1" y="1" width="46" height="46" rx="10" stroke="#1f5f47" stroke-width="2"/>
+  <!-- Building mass -->
+  <path d="M13 37V19.5L24 13l11 6.5V37" stroke="#74c69d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Floor slabs -->
+  <path d="M17.5 37V26.5M24 37V22.5M30.5 37V26.5" stroke="#3fae83" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Leaf / sustainability accent -->
+  <path d="M33 11.5c0 4.4-3 7.4-7.2 7.8.4-4.3 3-7.3 7.2-7.8Z" fill="#b9d96a"/>
+</svg>

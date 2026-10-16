@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  /* ── Green Twin brand environment ───────────────────────────
+     Deep forest green brand base, warm off-white ink, sage/lime
+     accents. Legacy accent variable names (--accent-blue/cyan/
+     violet) are retained so no component API changes, but their
+     values now carry the green-building palette.             */
+  --bg-dark: #07120d;
+  --bg-surface: rgba(10, 24, 18, 0.6);
+  --bg-surface-elevated: rgba(14, 32, 24, 0.7);
+  --bg-glass: rgba(9, 22, 17, 0.65);
+
+  /* Accents */
+  --accent-blue: #4fb08a;   /* primary brand action / link jade */
+  --accent-cyan: #96cf9c;   /* section highlight sage */
+  --accent-violet: #8fa8a2; /* neutral instrument slate-sage */
+  --accent-emerald: #34d399; /* semantic: live / positive state */
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+
+  /* Typography Colors — warm off-white neutrals */
+  --color-ink: #f2efe8;
+  --color-ink-muted: #a9b3a8;
+  --color-ink-dim: #7c877c;
+  --color-ink-faint: #57614f;
+  --color-ink-2: #d6d2c7;
+
+  /* Semantic status colors */
+  --color-ok: #34d399;
+  --color-warn: #f59e0b;
+  --color-danger: #f43f5e;
+  --color-accent: #4fb08a;
+  --color-accent-3: #4fb08a;
+
+  /* Subtle Lines */
+  --color-line: rgba(255, 255, 255, 0.07);
+  --color-line-bright: rgba(79, 176, 138, 0.32);
+
+  /* Panel Backgrounds */
+  --color-panel: rgba(10, 24, 18, 0.5);
+  --color-panel-2: rgba(14, 32, 24, 0.5);
+  --color-panel-3: rgba(20, 42, 32, 0.6);
+
+  /* Fonts */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbars ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 176, 138, 0.35);
+}
+
+/* ── Glass Panel System ───────────────────────────────────── */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+}
+
+.glass-panel-hover {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.glass-panel-hover:hover {
+  border-color: var(--color-line-bright);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 16px rgba(79, 176, 138, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ── Data Table ───────────────────────────────────────────── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.data-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-line);
+  white-space: nowrap;
+}
+.data-table td {
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.data-table tbody tr {
+  transition: background 0.15s ease;
+}
+.data-table tbody tr:hover {
+  background: rgba(79, 176, 138, 0.05);
+}
+
+/* ── Badge Pill ───────────────────────────────────────────── */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* ── Atmospheric Glow Ambient Effects ─────────────────────── */
+.ambient-glow-cyan {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(79, 176, 138, 0.09) 0%, rgba(7, 18, 13, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+  animation: ambientFloat 12s ease-in-out infinite alternate;
+}
+
+.ambient-glow-violet {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(185, 217, 106, 0.06) 0%, rgba(7, 18, 13, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+  animation: ambientFloat 15s ease-in-out infinite alternate-reverse;
+}
+
+.ambient-glow-blue {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(31, 95, 71, 0.16) 0%, rgba(7, 18, 13, 0) 70%);
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes ambientFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.05); }
+  100% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* ── Open Layout Floating Container ──────────────────────── */
+.open-surface {
+  background: rgba(10, 24, 18, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.open-surface-hover:hover {
+  border-color: var(--color-line-bright);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(79, 176, 138, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ── Minimal Buttons ─────────────────────────────────────── */
+.btn-primary {
+  background: linear-gradient(135deg, #1f5f47 0%, #123f30 100%);
+  color: #f2efe8;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  border: 1px solid rgba(79, 176, 138, 0.45);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(31, 95, 71, 0.4);
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2a7a5c 0%, #17513e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(31, 95, 71, 0.55);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-line);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-line-bright);
+  color: #ffffff;
+}
+
+/* ── Status Dot ──────────────────────────────────────────── */
+.status-dot-live {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--accent-emerald);
+  animation: pulseDot 2s infinite ease-in-out;
+}
