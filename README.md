@@ -549,16 +549,6 @@ Green Twin enforces strict data transparency. The following boundaries are maint
 
 ---
 
-## Team Contributions
-
-**The Commit Crew** — DSU CodeClash 2.0 (Eureka):
-
-- **Rakshith G M** ([@Rakshith-G-M](https://github.com/Rakshith-G-M)) — System architecture, 3D digital twin pipeline (`role-bim`), and integration.
-- **Meghana Gowda C N** ([@meghanagowdacn](https://github.com/meghanagowdacn)) — Frontend architecture, Computer Vision workflow, and integrated AI UX (`role-frontend`).
-- **Rochan** ([@rochan](https://github.com/rochan)) — Telemetry ingestion, baseline and anomaly detection, decision intelligence, and recommendation engine (`role-analytics`).
-
----
-
 ## Future Scope
 
 - **Physical Sensor Localization:** Ingest electrical schematics or room schedule coordinates to resolve the currently unmapped sensors to specific IFC room volumes.
